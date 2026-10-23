@@ -4,6 +4,8 @@ public class CuentaBancaria {
     private double saldo;
     private double tasaInteres;
 
+
+
     // Constructor
     public CuentaBancaria(String numeroCuenta, String titular, double saldoInicial, double tasaInteres) {
         this.numeroCuenta = numeroCuenta;
@@ -24,6 +26,23 @@ public class CuentaBancaria {
             this.tasaInteres = 0;
             System.out.println("Advertencia: La tasa de interés no puede ser negativa. Se ha establecido en 0.");
         }
+
+    }
+    // Getters
+    public String getNumeroCuenta() {
+        return numeroCuenta;
+    }
+
+    public String getTitular() {
+        return titular;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public double getTasaInteres() {
+        return tasaInteres;
     }
 
 }
