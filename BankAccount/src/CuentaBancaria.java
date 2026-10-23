@@ -57,4 +57,13 @@ public class CuentaBancaria {
             System.out.println("Error: El monto a depositar debe ser positivo.");
         }
     }
+
+    // metodo para aplicar interes
+    public void aplicarInteres() {
+        double interesGenerado = saldo * (tasaInteres / 100);
+        saldo += interesGenerado;
+        System.out.println("Interés aplicado correctamente.");
+        System.out.println("Interés generado: $" + interesGenerado);
+        System.out.println("Nuevo saldo con intereses: $" + saldo);
+    }
 }
