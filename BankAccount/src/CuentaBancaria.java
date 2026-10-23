@@ -45,4 +45,16 @@ public class CuentaBancaria {
         return tasaInteres;
     }
 
+
+    // metodo depositar
+    public void depositar(double monto) {
+        if (monto > 0) {
+            saldo += monto;
+            System.out.println("Depósito exitoso.");
+            System.out.println("Monto depositado: $" + monto);
+            System.out.println("Nuevo saldo: $" + saldo);
+        } else {
+            System.out.println("Error: El monto a depositar debe ser positivo.");
+        }
+    }
 }
