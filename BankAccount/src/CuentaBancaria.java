@@ -45,6 +45,10 @@ public abstract class CuentaBancaria {
         return tasaInteres;
     }
 
+    protected void actualizarSaldo(double nuevoSaldo) {
+        this.saldo = nuevoSaldo;
+    }
+
 
     // metodo depositar
     public void depositar(double monto) {
