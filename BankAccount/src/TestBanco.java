@@ -1,5 +1,5 @@
 ﻿public class TestBanco {
-
+//Rectificar que si funcione por favor
     public static void main(String[] args) {
 
         // Cuentas de bancarias con la info del laboratorio
