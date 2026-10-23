@@ -66,4 +66,13 @@ public class CuentaBancaria {
         System.out.println("Interés generado: $" + interesGenerado);
         System.out.println("Nuevo saldo con intereses: $" + saldo);
     }
+
+    // metodo mostrar info
+    public void mostrarInfo() {
+        System.out.println("--- Información de la Cuenta ---");
+        System.out.println("Número de Cuenta: " + numeroCuenta);
+        System.out.println("Titular: " + titular);
+        System.out.println("Saldo actual: $" + saldo);
+        System.out.println("Tasa de interés: " + tasaInteres + "%");
+    }
 }
