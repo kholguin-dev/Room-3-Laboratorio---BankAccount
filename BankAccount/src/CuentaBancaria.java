@@ -1,4 +1,4 @@
-public class CuentaBancaria {
+public abstract class CuentaBancaria {
     private String numeroCuenta;
     private String titular;
     private double saldo;
@@ -16,8 +16,8 @@ public class CuentaBancaria {
             this.saldo = saldoInicial;
         } else {
             this.saldo = 0;
-            System.out.println("Advertencia: El saldo inicial no puede ser negativo. Se ha establecido en 0.");
         }
+        System.out.println("Advertencia: El saldo inicial no puede ser negativo. Se ha establecido en 0.");
 
         // Validación de tasa de interés no negativa
         if (tasaInteres >= 0) {
@@ -57,6 +57,9 @@ public class CuentaBancaria {
             System.out.println("Error: El monto a depositar debe ser positivo.");
         }
     }
+
+    // metood abstracto para retirar
+    public abstract void retirar(double monto);
 
     // metodo para aplicar interes
     public void aplicarInteres() {
