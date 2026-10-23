@@ -1,14 +1,29 @@
 public class CuentaBancaria {
     private String numeroCuenta;
-    private String titula;
+    private String titular;
     private double saldo;
     private double tasaInteres;
 
-    public CuentaBancaria(String numeroCuenta, String titula, double saldo, double tasaInteres) {
+    // Constructor
+    public CuentaBancaria(String numeroCuenta, String titular, double saldoInicial, double tasaInteres) {
         this.numeroCuenta = numeroCuenta;
-        this.titula = titula;
-        this.saldo = saldo;
-        this.tasaInteres = tasaInteres;
+        this.titular = titular;
+
+        // Validación de saldo inicial no negativo
+        if (saldoInicial >= 0) {
+            this.saldo = saldoInicial;
+        } else {
+            this.saldo = 0;
+            System.out.println("Advertencia: El saldo inicial no puede ser negativo. Se ha establecido en 0.");
+        }
+
+        // Validación de tasa de interés no negativa
+        if (tasaInteres >= 0) {
+            this.tasaInteres = tasaInteres;
+        } else {
+            this.tasaInteres = 0;
+            System.out.println("Advertencia: La tasa de interés no puede ser negativa. Se ha establecido en 0.");
+        }
     }
 
 }
