@@ -192,9 +192,3 @@ Requisitos: **JDK 8 o superior** instalado (`java -version` para comprobarlo).
 - Prueba cada clase a medida que la crees.
 - Formatea los valores monetarios con `String.format("%.2f", valor)`.
 - Escribe mensajes de error claros e informativos.
-
----
-
-## 👩‍💻 Autora
-
-Desarrolladora Full Stack Java en formación.
