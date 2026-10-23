@@ -12,6 +12,11 @@ public class CuentaAhoro extends CuentaBancaria{
         }
         this.fechaApertura = fechaApertura;
     }
+
+    public String getFechaApertura() {
+        return fechaApertura;
+    }
+
     @Override
     public void retirar(double monto){
         if (monto <= 0){
@@ -20,6 +25,13 @@ public class CuentaAhoro extends CuentaBancaria{
             System.out.println("Error: saldo insuficiente");
         }else{
             double nuevoSaldo = getSaldo() - monto;
+            actualizarSaldo(nuevoSaldo);
+
+            System.out.println("Retiro exitoso.");
+            System.out.println("Monto retirado: $" +
+                    String.format("%.2f", monto));
+            System.out.println("Nuevo saldo: $" +
+                    String.format("%.2f", getSaldo()));
         }
     }
 
