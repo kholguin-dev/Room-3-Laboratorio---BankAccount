@@ -1,7 +1,7 @@
-public class CuentaAhoro extends CuentaBancaria{
+public class CuentaAhorro extends CuentaBancaria{  // se corrige la palabra ahoro por ahorro
     private String fechaApertura;
 
-    private static final double TASA_INTERES = 2.5,
+    private static final double TASA_INTERES = 2.5;
     private static final double SALDO_MINIMO = 10000.0;
 
     //Constructor

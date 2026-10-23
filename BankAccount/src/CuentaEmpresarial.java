@@ -20,7 +20,8 @@ public class CuentaEmpresarial extends CuentaBancaria {
             System.out.println("Saldo insuficiente");
             return;
         }
-        saldo -= monto + comisionRetiro;
+        // "Saldo" no esta registrado nuevamente es actualizarSaldo y validar la operacion se reemplaza -=monto + comisionRetiro
+        actualizarSaldo(getSaldo() - monto - comisionRetiro);
         System.out.println("Retiro exitoso");
         System.out.println("Comision por retiro: $" + comisionRetiro);
         System.out.println("Nuevo saldo: $" + getSaldo());

@@ -4,8 +4,7 @@ public class CuentaCorriente extends CuentaBancaria {
     private double porcentajeComisionSobregiro;
 
     // Builder
-    public CuentaCorriente(String numeroCuenta, String titular, double saldoInicial,
-                           double limiteSobregiro, double porcentajeComisionSobregiro) {
+    public CuentaCorriente(String numeroCuenta, String titular, double saldoInicial, double limiteSobregiro, double porcentajeComisionSobregiro) {
         super(numeroCuenta, titular, saldoInicial, 0.0);
         this.limiteSobregiro = limiteSobregiro;
         this.porcentajeComisionSobregiro = porcentajeComisionSobregiro;
@@ -32,15 +31,15 @@ public class CuentaCorriente extends CuentaBancaria {
                     + " excede el límite de sobregiro disponible.");
             return;
         }
-
-        setSaldo(getSaldo() - monto);
+// recuerda aqui no se usa set sino la variable actualizarSaldo 
+        actualizarSaldo(getSaldo() - monto);
         System.out.println("Retiro exitoso por $" + String.format("%.2f", monto));
 
         if (getSaldo() < 0) {
             double montoSobregirado = Math.abs(getSaldo());
             double comision = montoSobregirado * (porcentajeComisionSobregiro / 100.0);
 
-            setSaldo(getSaldo() - comision);
+            actualizarSaldo(getSaldo() - comision);
 
             System.out.println("Comisión por sobregiro (" + porcentajeComisionSobregiro + "%): $"
                     + String.format("%.2f", comision));
